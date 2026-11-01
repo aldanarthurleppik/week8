@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --sidebar: #9b9393;
+  --pink: #d8b4b4;
+  --plum: #786b79;
+  --ink: #111;
+  --line: #aaa;
+}
+
+html {
+  background: #242424;
+}
+
+body {
+  margin: 0;
+  padding: 28px 16px 60px;
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  background: #fff;
+  min-height: 1100px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15);
+}
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  min-height: 820px;
+}
+
+.sidebar {
+  background: var(--sidebar);
+  padding: 34px 22px;
+}
+
+.portrait {
+  display: block;
+  width: min(70%, 220px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  margin: 0 0 28px 8px;
+}
+
+.side-card {
+  background: var(--pink);
+  padding: 14px 13px 16px;
+  margin: 0 0 34px;
+}
+
+.side-card h2 {
+  font-size: clamp(12px, 1.35vw, 17px);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  font-weight: 800;
+}
+
+.section-icon {
+  font-size: 1.25em;
+  vertical-align: -1px;
+}
+
+.side-list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--plum);
+  min-height: 120px;
+  font-size: clamp(10px, .9vw, 13px);
+}
+
+.side-list li {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  margin: 0 0 9px;
+}
+
+.side-list a {
+  color: #d7a4a4;
+  text-decoration: none;
+}
+
+.mini-icon {
+  color: #16131a;
+  width: 13px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.bullets {
+  padding-left: 28px;
+  list-style: disc;
+  color: #d7a4a4;
+}
+
+.bullets li {
+  display: list-item;
+  margin-bottom: 8px;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 24px;
+  font-size: clamp(10px, .9vw, 13px);
+  line-height: 1.9;
+}
+
+.main-content {
+  padding: 48px 42px 54px;
+}
+
+.intro h1 {
+  font-size: clamp(28px, 3.1vw, 42px);
+  line-height: 1;
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: clamp(10px, .9vw, 13px);
+  font-weight: 700;
+  margin: 0 0 30px;
+}
+
+.small-heading {
+  font-size: clamp(13px, 1.2vw, 16px);
+  margin: 0 0 8px;
+}
+
+.description {
+  font-size: clamp(10px, .9vw, 13px);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 620px;
+}
+
+.content-section {
+  margin-top: 46px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding: 0 0 9px;
+  margin: 0 0 18px;
+  font-size: clamp(15px, 1.55vw, 20px);
+  font-weight: 900;
+}
+
+.section-heading span {
+  font-size: 1.4em;
+  line-height: .8;
+}
+
+.entry {
+  margin: 0 0 20px;
+  padding-left: 12px;
+}
+
+.entry h3 {
+  margin: 0 0 3px;
+  font-size: clamp(12px, 1.15vw, 15px);
+  font-weight: 800;
+}
+
+.entry ul {
+  margin: 0;
+  padding-left: 17px;
+  font-size: clamp(10px, .9vw, 13px);
+}
+
+.experience-list {
+  background: #fafafa;
+  padding: 15px 12px 4px;
+}
+
+.experience-list .entry {
+  margin-bottom: 14px;
+}
+
+.competencies {
+  margin-top: 42px;
+}
+
+.competency-list {
+  padding-left: 25px;
+  margin: 22px 0 0;
+  font-size: clamp(10px, .9vw, 13px);
+  line-height: 2.7;
+}
+
+.feedback {
+  min-height: 480px;
+  padding: 34px 12% 60px;
+}
+
+.feedback-rule {
+  height: 1px;
+  width: 70%;
+  margin: 0 auto 80px;
+  background: #bbb;
+}
+
+.review-placeholder {
+  width: 76%;
+  aspect-ratio: 2.15 / 1;
+  background: #d8d8d8;
+  border: 1px solid #aaa;
+  margin: 0 auto 12px;
+}
+
+.feedback-bottom {
+  width: 76%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stars {
+  white-space: nowrap;
+  font-family: Georgia, serif;
+  font-size: clamp(18px, 2.2vw, 27px);
+  letter-spacing: -3px;
+  color: #333;
+}
+
+.review-button {
+  background: #d8d8d8;
+  border: 1px solid #999;
+  border-bottom: 4px solid #111;
+  padding: 18px 22px;
+  min-height: 54px;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .cv-layout {
+    min-height: 900px;
+  }
+  .sidebar {
+    padding: 42px 34px;
+  }
+  .main-content {
+    padding: 62px 58px;
+  }
+  .side-card {
+    margin-bottom: 42px;
+    padding: 18px 18px 20px;
+  }
+  .side-list {
+    padding: 14px 16px;
+  }
+  .content-section {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+    background: #fff;
+  }
+  .page {
+    width: 100%;
+    min-height: 100vh;
+    box-shadow: none;
+  }
+  .cv-layout {
+    grid-template-columns: 35% 65%;
+    min-height: 0;
+  }
+  .sidebar {
+    padding: 18px 8px 24px;
+  }
+  .portrait {
+    width: 78%;
+    margin: 0 auto 12px;
+  }
+  .side-card {
+    padding: 8px 6px 9px;
+    margin-bottom: 16px;
+  }
+  .side-card h2 {
+    font-size: 9px;
+    margin-bottom: 7px;
+  }
+  .side-list {
+    padding: 7px 5px;
+    min-height: 0;
+    font-size: 8px;
+  }
+  .side-list li {
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .mini-icon {
+    width: 9px;
+    font-size: 8px;
+  }
+  .plain-list {
+    font-size: 8px;
+    padding-left: 14px;
+  }
+  .main-content {
+    padding: 24px 12px 30px;
+  }
+  .intro h1 {
+    font-size: 19px;
+    margin-bottom: 7px;
+  }
+  .subtitle {
+    font-size: 7px;
+    margin-bottom: 18px;
+  }
+  .small-heading {
+    font-size: 9px;
+    margin-bottom: 5px;
+  }
+  .description {
+    font-size: 7px;
+    line-height: 1.4;
+  }
+  .content-section {
+    margin-top: 25px;
+  }
+  .section-heading {
+    font-size: 10px;
+    gap: 6px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .entry {
+    padding-left: 5px;
+    margin-bottom: 13px;
+  }
+  .entry h3 {
+    font-size: 8px;
+  }
+  .entry ul {
+    font-size: 7px;
+    padding-left: 12px;
+  }
+  .experience-list {
+    padding: 8px 5px 2px;
+  }
+  .experience-list .entry {
+    margin-bottom: 9px;
+  }
+  .competencies {
+    margin-top: 23px;
+  }
+  .competency-list {
+    font-size: 7px;
+    padding-left: 15px;
+    margin-top: 12px;
+    line-height: 2.5;
+  }
+  .feedback {
+    min-height: 330px;
+    padding: 18px 8% 35px;
+  }
+  .feedback-rule {
+    margin-bottom: 38px;
+  }
+  .review-placeholder,
+  .feedback-bottom {
+    width: 82%;
+  }
+  .stars {
+    font-size: 15px;
+    letter-spacing: -3px;
+  }
+  .review-button {
+    font-size: 6px;
+    min-height: 36px;
+    padding: 10px 9px;
+  }
+}
+
+@media (max-width: 340px) {
+  .side-card h2 { font-size: 8px; }
+  .main-content { padding-left: 9px; padding-right: 9px; }
+}
